@@ -11,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src/main/java/qrcode" />
   </component>
   <component name="ProjectId" id="1vphCiHDjSfUqhjaVQA4YAmO3lF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -56,7 +56,7 @@
       <updated>1627264813073</updated>
       <workItem from="1630763567079" duration="97000" />
       <workItem from="1631190909590" duration="369000" />
-      <workItem from="1631191283646" duration="1131000" />
+      <workItem from="1631191283646" duration="1580000" />
     </task>
     <servers />
   </component>
