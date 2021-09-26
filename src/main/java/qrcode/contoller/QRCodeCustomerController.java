@@ -17,7 +17,7 @@ import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.qrcode.QRCodeWriter;
-import com.vnpay.qr.tlv.HexUtil;
+//import com.vnpay.qr.tlv.HexUtil;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -109,10 +109,17 @@ public class QRCodeCustomerController implements QRCodeCustomerIF {
 
     @Override
     public String convertStringToHex(String encodeString) {
-        byte[] decodedBytes = Base64.getDecoder().decode(encodeString);
+        /*byte[] decodedBytes = Base64.getDecoder().decode(encodeString);
         String decodedString = new String(decodedBytes);
         String origHex = HexUtil.toHexString(decodedBytes);
-        return HexUtil.toHexString(decodedBytes);
+        return HexUtil.toHexString(decodedBytes);*/
+
+        byte[] getBytesFromString = encodeString.getBytes(StandardCharsets.UTF_8);
+        BigInteger bigInteger = new BigInteger(1, getBytesFromString);
+
+        String convertedResult = String.format("%x", bigInteger);
+
+        return convertedResult;
     }
 
     @Override
