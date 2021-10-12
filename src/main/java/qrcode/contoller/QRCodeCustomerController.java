@@ -39,6 +39,7 @@ import java.util.logging.Logger;
 import javax.crypto.Mac;
 import javax.imageio.ImageIO;
 
+import com.vnpay.qr.tlv.HexUtil;
 import org.json.JSONException;
 import org.json.JSONObject;
 import qrcode.IF.QRCodeCustomerIF;
@@ -109,17 +110,11 @@ public class QRCodeCustomerController implements QRCodeCustomerIF {
 
     @Override
     public String convertStringToHex(String encodeString) {
-        /*byte[] decodedBytes = Base64.getDecoder().decode(encodeString);
+        byte[] decodedBytes = Base64.getDecoder().decode(encodeString);
         String decodedString = new String(decodedBytes);
         String origHex = HexUtil.toHexString(decodedBytes);
-        return HexUtil.toHexString(decodedBytes);*/
+        return HexUtil.toHexString(decodedBytes);
 
-        byte[] getBytesFromString = encodeString.getBytes(StandardCharsets.UTF_8);
-        BigInteger bigInteger = new BigInteger(1, getBytesFromString);
-
-        String convertedResult = String.format("%x", bigInteger);
-
-        return convertedResult;
     }
 
     @Override
