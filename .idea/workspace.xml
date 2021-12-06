@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2db97eee-15c9-4b41-b509-f3d40fac562d" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/qrcode/model/QRCodeCheckRefundModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/QRCodeProject_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyQRCode.png" beforeDir="false" afterPath="$PROJECT_DIR$/MyQRCode.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/qrcode/IF/QRCodeIF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qrcode/IF/QRCodeIF.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/qrcode/contoller/QRCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qrcode/contoller/QRCodeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/qrcode/view/QRCodeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qrcode/view/QRCodeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/qrcode/contoller/QRCodeCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qrcode/contoller/QRCodeCustomerController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +39,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
@@ -123,5 +122,16 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/src/main/java/qrcode" />
     </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/qrcode/contoller/QRCodeController.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

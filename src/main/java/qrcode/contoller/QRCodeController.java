@@ -17,7 +17,6 @@ import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.qrcode.QRCodeWriter;
-
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -57,10 +56,8 @@ public class QRCodeController implements QRCodeIF {
             BitMatrix bitMatrix = qrCodeWriter.encode(text, BarcodeFormat.QR_CODE, width, height);
             Path path = FileSystems.getDefault().getPath(filePath);
             MatrixToImageWriter.writeToPath(bitMatrix, "PNG", path);  // write image into path.
-        } catch (WriterException ex) {
-            Logger.getLogger(QRCodeController.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(QRCodeController.class.getName()).log(Level.SEVERE, null, ex);
+        }catch(Exception exception){
+            System.out.println(exception.toString());
         }
     }
 
@@ -178,10 +175,9 @@ public class QRCodeController implements QRCodeIF {
                     + secretKey;
 
             return encodeString;
-        } catch (JSONException ex) {
-            Logger.getLogger(QRCodeController.class.getName()).log(Level.SEVERE, null, ex);
+        }catch(Exception exception){
+            System.out.println(exception.toString());
         }
-
         return "";
     }
 
@@ -200,8 +196,8 @@ public class QRCodeController implements QRCodeIF {
                 checksum = "0" + checksum;
             }
             return checksum;
-        } catch (NoSuchAlgorithmException ex) {
-            Logger.getLogger(QRCodeController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch(Exception exception){
+            System.out.println(exception.toString());
         }
 
         return "";
@@ -238,8 +234,8 @@ public class QRCodeController implements QRCodeIF {
                     + secretKey;
             return encodeString;
 
-        } catch (JSONException ex) {
-            Logger.getLogger(QRCodeController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch(Exception exception){
+            System.out.println(exception.toString());
         }
 
         return "";
@@ -473,8 +469,8 @@ public class QRCodeController implements QRCodeIF {
                     + secretKey;
             return encodeString;
 
-        } catch (JSONException ex) {
-            Logger.getLogger(QRCodeController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch(Exception exception){
+            System.out.println(exception.toString());
         }
 
         return "";
@@ -537,12 +533,12 @@ public class QRCodeController implements QRCodeIF {
     public String loadParamsDefault_CheckRefundQR() {
 
         String jsonString = "{"
-                + "\n" + "\"merchantCode\": \"0303217354\","
-                + "\n" + "\"qrTrace\": \"244220063\","
-                + "\n" + "\"refundTxnId\": \"12345\","
-                + "\n" + "\"typeRefund\": \"1\","  //
-                + "\n" + "\"amount\": \"42000\","
-                + "\n" + "\"initRefundTime\": \"20211123\""
+                + "\n" + "\"merchantCode\": \"88888888\","
+                + "\n" + "\"qrTrace\": \"244203944\","
+                + "\n" + "\"refundTxnId\": \"8818\"," //you must enter the value with type variable is LONG.
+                + "\n" + "\"typeRefund\": \"2\","
+                + "\n" + "\"amount\": \"10000\","
+                + "\n" + "\"initRefundTime\": \"20210823\""
                 // "\n" +"\checkSum\": \"f74b7d8906122113cbb22dc43b3fd95e\"
                 + "\n" + "}";
 
@@ -571,8 +567,8 @@ public class QRCodeController implements QRCodeIF {
                     + qrRefund.getPayDate();
 
             return encodeString;
-        } catch (JSONException ex) {
-            Logger.getLogger(QRCodeController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch(Exception exception){
+            System.out.println(exception.toString());
         }
 
         return "";
@@ -596,8 +592,8 @@ public class QRCodeController implements QRCodeIF {
                     + qrCheckRefund.getAmount()
                     + qrCheckRefund.getInitRefundTime();
             return encodeString;
-        } catch (JSONException ex) {
-            Logger.getLogger(QRCodeController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch(Exception exception){
+            System.out.println(exception.toString());
         }
 
         return "";

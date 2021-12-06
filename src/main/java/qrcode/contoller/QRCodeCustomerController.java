@@ -66,10 +66,8 @@ public class QRCodeCustomerController implements QRCodeCustomerIF {
             BitMatrix bitMatrix = qrCodeWriter.encode(text, BarcodeFormat.QR_CODE, width, height);
             Path path = FileSystems.getDefault().getPath(filePath);
             MatrixToImageWriter.writeToPath(bitMatrix, "PNG", path);  // write image into path.
-        } catch (WriterException ex) {
-            Logger.getLogger(QRCodeController.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(QRCodeController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch(Exception exception){
+            System.out.println(exception.toString());
         }
     }
 
@@ -101,9 +99,8 @@ public class QRCodeCustomerController implements QRCodeCustomerIF {
                 //System.out.println("There is no QR code in the image");
                 return null;
             }
-        } catch (IOException ex) {
-
-            Logger.getLogger(QRCodeCustomerController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch(Exception exception){
+            System.out.println(exception.toString());
         }
         return null;
     }
@@ -226,8 +223,8 @@ public class QRCodeCustomerController implements QRCodeCustomerIF {
                     + qrCusModel.getInvoiceNo();
             return encodeString;
 
-        } catch (JSONException ex) {
-            Logger.getLogger(QRCodeCustomerController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch(Exception exception){
+            System.out.println(exception.toString());
         }
 
         return "";
