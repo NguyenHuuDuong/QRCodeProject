@@ -36,10 +36,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import qrcode.IF.QRCodeIF;
-import qrcode.model.DataStringModel;
-import qrcode.model.QRCodeMerchantPaymentModel;
-import qrcode.model.QRCodeModel;
-import qrcode.model.QRCodeRefundModel;
+import qrcode.model.*;
 
 /**
  * @author huuduong
@@ -51,6 +48,7 @@ public class QRCodeController implements QRCodeIF {
     //private static final String SECRET_KEY = "vnpay@Merchant";
     QRCodeMerchantPaymentModel qrPayment = new QRCodeMerchantPaymentModel();
     QRCodeRefundModel qrRefund = new QRCodeRefundModel();
+    QRCodeCheckRefundModel qrCheckRefund = new QRCodeCheckRefundModel();
 
     @Override
     public void writeQRImage(String text, int width, int height, String filePath) {
@@ -536,6 +534,22 @@ public class QRCodeController implements QRCodeIF {
     }
 
     @Override
+    public String loadParamsDefault_CheckRefundQR() {
+
+        String jsonString = "{"
+                + "\n" + "\"merchantCode\": \"0303217354\","
+                + "\n" + "\"qrTrace\": \"244220063\","
+                + "\n" + "\"refundTxnId\": \"12345\","
+                + "\n" + "\"typeRefund\": \"1\","  //
+                + "\n" + "\"amount\": \"42000\","
+                + "\n" + "\"initRefundTime\": \"20211123\""
+                // "\n" +"\checkSum\": \"f74b7d8906122113cbb22dc43b3fd95e\"
+                + "\n" + "}";
+
+        return jsonString;
+    }
+
+    @Override
     public String convertJsontoString_RefundQR(String jsonString, String secretKey) {
         try {
             JSONObject jsonObject = new JSONObject(jsonString);
@@ -565,6 +579,31 @@ public class QRCodeController implements QRCodeIF {
     }
 
     @Override
+    public String convertJsontoString_CheckRefundQR(String jsonString, String secretKey) {
+        try {
+            JSONObject jsonObject = new JSONObject(jsonString);
+            qrCheckRefund.setMerchantCode(jsonObject.getString("merchantCode"));
+            qrCheckRefund.setQrTrace(jsonObject.getString("qrTrace"));
+            qrCheckRefund.setRefundTxnId(jsonObject.getString("refundTxnId"));
+            qrCheckRefund.setTypeRefund(jsonObject.getString("typeRefund"));
+            qrCheckRefund.setAmount(jsonObject.getString("amount"));
+            qrCheckRefund.setInitRefundTime(jsonObject.getString("initRefundTime"));
+            String encodeString = secretKey
+                    + qrCheckRefund.getMerchantCode()
+                    + qrCheckRefund.getRefundTxnId()
+                    + qrCheckRefund.getQrTrace()
+                    + qrCheckRefund.getTypeRefund()
+                    + qrCheckRefund.getAmount()
+                    + qrCheckRefund.getInitRefundTime();
+            return encodeString;
+        } catch (JSONException ex) {
+            Logger.getLogger(QRCodeController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return "";
+    }
+
+    @Override
     public String loadParamsOfficial_RefundQR(String checksum) {
 
         String jsonString = "{"
@@ -580,6 +619,20 @@ public class QRCodeController implements QRCodeIF {
                 + "\n" + "}";
         return jsonString;
 
+    }
+
+    @Override
+    public String loadParamsOfficial_CheckRefundQR(String checksum) {
+        String jsonString = "{"
+                + "\n" + "\"merchantCode\": \"" + qrCheckRefund.getMerchantCode()  + "\","
+                + "\n" + "\"qrTrace\": \"" + qrCheckRefund.getQrTrace()+ "\","
+                + "\n" + "\"refundTxnId\": \"" + qrCheckRefund.getRefundTxnId()+ "\","
+                + "\n" + "\"typeRefund\": \"" + qrCheckRefund.getTypeRefund()+"\","  //
+                + "\n" + "\"amount\": \""+ qrCheckRefund.getAmount()+"\","
+                + "\n" + "\"initRefundTime\": \""+ qrCheckRefund.getInitRefundTime()+ "\","
+                + "\n" + "\"checkSum\": \"" + checksum + "\""
+                + "\n" + "}";
+        return jsonString;
     }
 
 }
