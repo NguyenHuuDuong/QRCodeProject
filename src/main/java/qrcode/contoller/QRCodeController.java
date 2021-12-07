@@ -17,6 +17,7 @@ import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.qrcode.QRCodeWriter;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -56,7 +57,7 @@ public class QRCodeController implements QRCodeIF {
             BitMatrix bitMatrix = qrCodeWriter.encode(text, BarcodeFormat.QR_CODE, width, height);
             Path path = FileSystems.getDefault().getPath(filePath);
             MatrixToImageWriter.writeToPath(bitMatrix, "PNG", path);  // write image into path.
-        }catch(Exception exception){
+        } catch (Exception exception) {
             System.out.println(exception.toString());
         }
     }
@@ -175,7 +176,7 @@ public class QRCodeController implements QRCodeIF {
                     + secretKey;
 
             return encodeString;
-        }catch(Exception exception){
+        } catch (Exception exception) {
             System.out.println(exception.toString());
         }
         return "";
@@ -196,7 +197,7 @@ public class QRCodeController implements QRCodeIF {
                 checksum = "0" + checksum;
             }
             return checksum;
-        } catch(Exception exception){
+        } catch (Exception exception) {
             System.out.println(exception.toString());
         }
 
@@ -234,7 +235,7 @@ public class QRCodeController implements QRCodeIF {
                     + secretKey;
             return encodeString;
 
-        } catch(Exception exception){
+        } catch (Exception exception) {
             System.out.println(exception.toString());
         }
 
@@ -469,7 +470,7 @@ public class QRCodeController implements QRCodeIF {
                     + secretKey;
             return encodeString;
 
-        } catch(Exception exception){
+        } catch (Exception exception) {
             System.out.println(exception.toString());
         }
 
@@ -567,7 +568,7 @@ public class QRCodeController implements QRCodeIF {
                     + qrRefund.getPayDate();
 
             return encodeString;
-        } catch(Exception exception){
+        } catch (Exception exception) {
             System.out.println(exception.toString());
         }
 
@@ -592,7 +593,7 @@ public class QRCodeController implements QRCodeIF {
                     + qrCheckRefund.getAmount()
                     + qrCheckRefund.getInitRefundTime();
             return encodeString;
-        } catch(Exception exception){
+        } catch (Exception exception) {
             System.out.println(exception.toString());
         }
 
@@ -620,12 +621,12 @@ public class QRCodeController implements QRCodeIF {
     @Override
     public String loadParamsOfficial_CheckRefundQR(String checksum) {
         String jsonString = "{"
-                + "\n" + "\"merchantCode\": \"" + qrCheckRefund.getMerchantCode()  + "\","
-                + "\n" + "\"qrTrace\": \"" + qrCheckRefund.getQrTrace()+ "\","
-                + "\n" + "\"refundTxnId\": \"" + qrCheckRefund.getRefundTxnId()+ "\","
-                + "\n" + "\"typeRefund\": \"" + qrCheckRefund.getTypeRefund()+"\","  //
-                + "\n" + "\"amount\": \""+ qrCheckRefund.getAmount()+"\","
-                + "\n" + "\"initRefundTime\": \""+ qrCheckRefund.getInitRefundTime()+ "\","
+                + "\n" + "\"merchantCode\": \"" + qrCheckRefund.getMerchantCode() + "\","
+                + "\n" + "\"qrTrace\": \"" + qrCheckRefund.getQrTrace() + "\","
+                + "\n" + "\"refundTxnId\": \"" + qrCheckRefund.getRefundTxnId() + "\","
+                + "\n" + "\"typeRefund\": \"" + qrCheckRefund.getTypeRefund() + "\","  //
+                + "\n" + "\"amount\": \"" + qrCheckRefund.getAmount() + "\","
+                + "\n" + "\"initRefundTime\": \"" + qrCheckRefund.getInitRefundTime() + "\","
                 + "\n" + "\"checkSum\": \"" + checksum + "\""
                 + "\n" + "}";
         return jsonString;

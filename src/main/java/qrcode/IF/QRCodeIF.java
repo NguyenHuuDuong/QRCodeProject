@@ -37,6 +37,7 @@ public interface QRCodeIF {
     public String convertJsontoString_Checktrans(String jsonString, String secretKey);
 
     public String convertJsontoString_RefundQR(String jsonString, String secretKey);
+
     public String convertJsontoString_CheckRefundQR(String jsonString, String secretKey);
 
     public String encodeMD5(String encodeString);
