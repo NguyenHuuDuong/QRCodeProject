@@ -37,6 +37,7 @@ public class QRCodeView extends javax.swing.JFrame {
         initComponents();
         cbEnviQRcode.addItem(new EnvironmentQRCodeModel("Create QRCode TEST", "vnpay@MERCHANT"));
         cbEnviQRcode.addItem(new EnvironmentQRCodeModel("Checktrans QRCode TEST", "vnpay@123"));
+        cbEnviQRcode.addItem(new EnvironmentQRCodeModel("Checktrans T+7 QRCode TEST", "Y29uZ2hvYXhhaG9pY2h1Z25naGlhdmlldG5hbWRvY2xhcHR1ZG9oYW5ocGh1Y2Rvbmd4aW5nbmdoaWdpYW9xd3d3ZXF3"));
         cbEnviQRcode.addItem(new EnvironmentQRCodeModel("Refund QRCode TEST", "vnpayRefund"));
         cbEnviQRcode.addItem(new EnvironmentQRCodeModel("CheckRefund QRCode TEST", "vnpayRefund"));
         cbEnviQRCus.addItem(new EnvironmentQRCusModel("Create QRPayment TEST", "112345432001@123"));
@@ -1441,44 +1442,51 @@ public class QRCodeView extends javax.swing.JFrame {
                 //qrController.encodeMD5(qrController.convertJsontoString_CreateQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()));
                 txtChecksum.setText(qrController.convertJsontoString_CreateQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()));
                 txtAreaQRCodeOutput.setText(qrController.loadParamsOfficial_CreateQR(qrController.encodeMD5(qrController.convertJsontoString_CreateQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()))));
-            } else {
-                if (envi.getEnvironment().equals("Checktrans QRCode TEST")) {
-                    //qrController.encodeMD5(qrController.convertJsontoString_Checktrans(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()));
-                    txtChecksum.setText(qrController.convertJsontoString_Checktrans(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()));
-                    txtAreaQRCodeOutput.setText(qrController.loadParamsOfficial_Checktrans(qrController.encodeMD5(qrController.convertJsontoString_Checktrans(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()))));
-                } else {
-                    if (envi.getEnvironment().equals("Refund QRCode TEST")) {
-                        txtChecksum.setText(qrController.convertJsontoString_RefundQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()));
-                        txtAreaQRCodeOutput.setText(qrController.loadParamsOfficial_RefundQR(qrController.encodeMD5(qrController.convertJsontoString_RefundQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()))));
-                    } else{
-                        if (envi.getEnvironment().equals("CheckRefund QRCode TEST")){
-                            txtChecksum.setText(qrController.convertJsontoString_CheckRefundQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()));
-                            txtAreaQRCodeOutput.setText(qrController.loadParamsOfficial_CheckRefundQR(qrController.encodeMD5(qrController.convertJsontoString_CheckRefundQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()))));
-                        }else {
-                            if (envi.getEnvironment().equals("Create QRCode LIVE")) {
-                                txtChecksum.setText(qrController.convertJsontoString_CreateQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()));
-                                txtAreaQRCodeOutput.setText(qrController.loadParamsOfficial_CreateQR(qrController.encodeMD5(qrController.convertJsontoString_CreateQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()))));
-                            } else {
-                                if (envi.getEnvironment().equals("Checktrans QRCode LIVE")) {
-                                    txtChecksum.setText(qrController.convertJsontoString_Checktrans(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()));
-                                    txtAreaQRCodeOutput.setText(qrController.loadParamsOfficial_Checktrans(qrController.encodeMD5(qrController.convertJsontoString_Checktrans(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()))));
-                                } else {
-                                    if (envi.getEnvironment().equals("Refund QRCode LIVE")) {
-                                        txtChecksum.setText(qrController.convertJsontoString_RefundQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()));
-                                        txtAreaQRCodeOutput.setText(qrController.loadParamsOfficial_RefundQR(qrController.encodeMD5(qrController.convertJsontoString_RefundQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()))));
-                                    }else{
-                                        if (envi.getEnvironment().equals("CheckRefund QRCode LIVE")){
-                                            txtChecksum.setText(qrController.convertJsontoString_CheckRefundQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()));
-                                            txtAreaQRCodeOutput.setText(qrController.loadParamsOfficial_CheckRefundQR(qrController.encodeMD5(qrController.convertJsontoString_CheckRefundQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()))));
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                }
+                return;
             }
+            if (envi.getEnvironment().equals("Checktrans QRCode TEST")) {
+                //qrController.encodeMD5(qrController.convertJsontoString_Checktrans(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()));
+                txtChecksum.setText(qrController.convertJsontoString_Checktrans(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()));
+                txtAreaQRCodeOutput.setText(qrController.loadParamsOfficial_Checktrans(qrController.encodeMD5(qrController.convertJsontoString_Checktrans(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()))));
+                return;
+            }
+            if (envi.getEnvironment().equals("Checktrans T+7 QRCode TEST")) {
+                txtChecksum.setText(qrController.convertJsontoString_Checktrans(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()));
+                txtAreaQRCodeOutput.setText(qrController.loadParamsOfficial_Checktrans(qrController.encodeMD5(qrController.convertJsontoString_Checktrans(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()))));
+                return;
+            }
+            if (envi.getEnvironment().equals("Refund QRCode TEST")) {
+                txtChecksum.setText(qrController.convertJsontoString_RefundQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()));
+                txtAreaQRCodeOutput.setText(qrController.loadParamsOfficial_RefundQR(qrController.encodeMD5(qrController.convertJsontoString_RefundQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()))));
+                return;
+            }
+            if (envi.getEnvironment().equals("CheckRefund QRCode TEST")) {
+                txtChecksum.setText(qrController.convertJsontoString_CheckRefundQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()));
+                txtAreaQRCodeOutput.setText(qrController.loadParamsOfficial_CheckRefundQR(qrController.encodeMD5(qrController.convertJsontoString_CheckRefundQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()))));
+                return;
+            }
+            if (envi.getEnvironment().equals("Create QRCode LIVE")) {
+                txtChecksum.setText(qrController.convertJsontoString_CreateQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()));
+                txtAreaQRCodeOutput.setText(qrController.loadParamsOfficial_CreateQR(qrController.encodeMD5(qrController.convertJsontoString_CreateQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()))));
+                return;
+            }
+            if (envi.getEnvironment().equals("Checktrans QRCode LIVE")) {
+                txtChecksum.setText(qrController.convertJsontoString_Checktrans(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()));
+                txtAreaQRCodeOutput.setText(qrController.loadParamsOfficial_Checktrans(qrController.encodeMD5(qrController.convertJsontoString_Checktrans(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()))));
+                return;
+            }
+            if (envi.getEnvironment().equals("Refund QRCode LIVE")) {
+                txtChecksum.setText(qrController.convertJsontoString_RefundQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()));
+                txtAreaQRCodeOutput.setText(qrController.loadParamsOfficial_RefundQR(qrController.encodeMD5(qrController.convertJsontoString_RefundQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()))));
+                return;
+            }
+            if (envi.getEnvironment().equals("CheckRefund QRCode LIVE")) {
+                txtChecksum.setText(qrController.convertJsontoString_CheckRefundQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()));
+                txtAreaQRCodeOutput.setText(qrController.loadParamsOfficial_CheckRefundQR(qrController.encodeMD5(qrController.convertJsontoString_CheckRefundQR(txtAreaQRCodeInput.getText(), txtQRCodeSecretKey.getText()))));
+                return;
+            }
+
+
         }
 
 
@@ -1490,18 +1498,23 @@ public class QRCodeView extends javax.swing.JFrame {
         EnvironmentQRCodeModel envi = (EnvironmentQRCodeModel) cbEnviQRcode.getSelectedItem();
         if (envi.getEnvironment().equals("Create QRCode TEST") || envi.getEnvironment().equals("Create QRCode LIVE")) {
             txtAreaQRCodeInput.setText(qrController.loadParamsDefault_CreateQR());
-        } else {
-            if (envi.getEnvironment().equals("Checktrans QRCode TEST") || envi.getEnvironment().equals("Checktrans QRCode LIVE")) {
-                txtAreaQRCodeInput.setText(qrController.loadParamsDefault_Checktrans());
-            } else {
-                if (envi.getEnvironment().equals("Refund QRCode TEST") || envi.getEnvironment().equals("Refund QRCode LIVE")) {
-                    txtAreaQRCodeInput.setText(qrController.loadParamsDefault_RefundQR());
-                }else {
-                    if(envi.getEnvironment().equals("CheckRefund QRCode TEST") || envi.getEnvironment().equals("CheckRefund QRCode LIVE") ){
-                        txtAreaQRCodeInput.setText(qrController.loadParamsDefault_CheckRefundQR());
-                    }
-                }
-            }
+            return;
+        }
+        if (envi.getEnvironment().equals("Checktrans QRCode TEST") || envi.getEnvironment().equals("Checktrans QRCode LIVE")) {
+            txtAreaQRCodeInput.setText(qrController.loadParamsDefault_Checktrans());
+            return;
+        }
+        if (envi.getEnvironment().equals("Checktrans T+7 QRCode TEST")) {
+            txtAreaQRCodeInput.setText(qrController.loadParamsDefault_Checktrans());
+            return;
+        }
+        if (envi.getEnvironment().equals("Refund QRCode TEST") || envi.getEnvironment().equals("Refund QRCode LIVE")) {
+            txtAreaQRCodeInput.setText(qrController.loadParamsDefault_RefundQR());
+            return;
+        }
+        if (envi.getEnvironment().equals("CheckRefund QRCode TEST") || envi.getEnvironment().equals("CheckRefund QRCode LIVE")) {
+            txtAreaQRCodeInput.setText(qrController.loadParamsDefault_CheckRefundQR());
+            return;
         }
 
     }//GEN-LAST:event_btnLoadQRChecksumParamTemplateActionPerformed

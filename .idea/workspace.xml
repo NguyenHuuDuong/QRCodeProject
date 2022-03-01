@@ -5,13 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2db97eee-15c9-4b41-b509-f3d40fac562d" name="Default Changelist" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/QRCodeProject_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/QRCodeProject_jar/QRCodeProject.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/QRCodeProject_jar/QRCodeProject.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/qrcode/IF/QRCodeIF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qrcode/IF/QRCodeIF.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/qrcode/contoller/QRCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qrcode/contoller/QRCodeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/qrcode/contoller/QRCodeCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qrcode/contoller/QRCodeCustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/contoller/QRCodeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/contoller/QRCodeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/contoller/QRCodeCustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/contoller/QRCodeCustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyQRCode.png" beforeDir="false" afterPath="$PROJECT_DIR$/MyQRCode.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QRCodeProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/QRCodeProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/qrcode/view/QRCodeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/qrcode/view/QRCodeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$16.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$17.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$18.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$19.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$20.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/qrcode/view/QRCodeView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +48,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1vphCiHDjSfUqhjaVQA4YAmO3lF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -43,6 +66,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -121,7 +146,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
