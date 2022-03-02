@@ -78,8 +78,8 @@ public class QRCodeController implements QRCodeIF {
                 //System.out.println("There is no QR code in the image");
                 return null;
             }
-        } catch (IOException ex) {
-            Logger.getLogger(QRCodeController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception exception) {
+            System.out.println(exception.toString());
         }
         return null;
     }
